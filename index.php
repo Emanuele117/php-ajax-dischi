@@ -2,7 +2,7 @@
 
 require __DIR__ . '/function.php';
 
-$response = [
+$response = '[
     {
         "poster": "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
         "title": "New Jersey",
@@ -73,9 +73,9 @@ $response = [
         "genre": "Pop",
         "year": "1987"
     }
-];
+]';
 
-$disks = json_encode($response, true);
+$disks = json_decode($response, true);
 
 ?> 
 
@@ -87,6 +87,16 @@ $disks = json_encode($response, true);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Php Dischi</title>
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+    <style>
+        body{
+            background-color: #1e2d3b;
+        }
+        .card,
+        header,
+        footer{
+            background-color: #36404a;
+        }
+    </style>
 </head>
 <body>
 
@@ -117,6 +127,12 @@ $disks = json_encode($response, true);
     </div>
   </main>
   <!-- /main -->
-  
+
+  <footer class="p-3">
+    <p class="text-center text-white">
+      copyright &copy;Boolean
+    </p>
+  </footer>
+
 </body>
 </html>
