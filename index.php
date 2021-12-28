@@ -2,7 +2,7 @@
 
 require __DIR__ . '/function.php';
 
-$response = '[
+/* $response = '[
     {
         "poster": "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
         "title": "New Jersey",
@@ -75,7 +75,7 @@ $response = '[
     }
 ]';
 
-$disks = json_decode($response, true);
+$disks = json_decode($response, true); */
 
 ?> 
 
