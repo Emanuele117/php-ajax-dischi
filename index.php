@@ -78,3 +78,45 @@ $response = [
 $disks = json_encode($response, true);
 
 ?> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Php Dischi</title>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+</head>
+<body>
+
+    <header>
+        <div class="logo p-2">
+        <img height="30" src="https://www.wallpapertip.com/wmimgs/17-176153_download-logo-spotify-png.png" alt="">
+        </div>
+    </header>
+ <!-- /header  -->
+
+    <main class="my-4">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <?php foreach ($disks as $disk) : ?>
+          <div class="col-2">
+            <div class="card text-white">
+              <img class="img-fluid" src="<?= $disk['poster'] ?>" alt="">
+              <div class="card-body">
+                <h3><?= $disk['title'] ?></h3>
+                <p><?= $disk['author'] ?></p>
+                <p><?= $disk['year'] ?></p>
+              </div>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </main>
+  <!-- /main -->
+  
+</body>
+</html>
